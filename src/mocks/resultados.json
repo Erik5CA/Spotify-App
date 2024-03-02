@@ -1,0 +1,139 @@
+{
+  "query": "the+weeknd",
+  "artists": {
+    "totalCount": 8,
+    "items": [
+      {
+        "data": {
+          "uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ",
+          "profile": {
+            "name": "The Weeknd"
+          },
+          "visuals": {
+            "avatarImage": {
+              "sources": [
+                {
+                  "url": "https://i.scdn.co/image/ab6761610000e5eb214f3cf1cbe7139c1e26ffbb",
+                  "width": 640,
+                  "height": 640
+                },
+                {
+                  "url": "https://i.scdn.co/image/ab6761610000f178214f3cf1cbe7139c1e26ffbb",
+                  "width": 160,
+                  "height": 160
+                },
+                {
+                  "url": "https://i.scdn.co/image/ab67616100005174214f3cf1cbe7139c1e26ffbb",
+                  "width": 320,
+                  "height": 320
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02",
+          "profile": {
+            "name": "Taylor Swift"
+          },
+          "visuals": {
+            "avatarImage": {
+              "sources": [
+                {
+                  "url": "https://i.scdn.co/image/ab6761610000e5eb859e4c14fa59296c8649e0e4",
+                  "width": 640,
+                  "height": 640
+                },
+                {
+                  "url": "https://i.scdn.co/image/ab6761610000f178859e4c14fa59296c8649e0e4",
+                  "width": 160,
+                  "height": 160
+                },
+                {
+                  "url": "https://i.scdn.co/image/ab67616100005174859e4c14fa59296c8649e0e4",
+                  "width": 320,
+                  "height": 320
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "uri": "spotify:artist:36fD6wj3y92rgL09GO3EaA",
+          "profile": {
+            "name": "the weeknd xo"
+          },
+          "visuals": {
+            "avatarImage": null
+          }
+        }
+      },
+      {
+        "data": {
+          "uri": "spotify:artist:3TVXtAsR1Inumwj472S9r4",
+          "profile": {
+            "name": "Drake"
+          },
+          "visuals": {
+            "avatarImage": {
+              "sources": [
+                {
+                  "url": "https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9",
+                  "width": 640,
+                  "height": 640
+                },
+                {
+                  "url": "https://i.scdn.co/image/ab6761610000f1784293385d324db8558179afd9",
+                  "width": 160,
+                  "height": 160
+                },
+                {
+                  "url": "https://i.scdn.co/image/ab676161000051744293385d324db8558179afd9",
+                  "width": 320,
+                  "height": 320
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "data": {
+          "uri": "spotify:artist:6slLTWLOPMNYPibDbhiVcq",
+          "profile": {
+            "name": "The Weeknd AI"
+          },
+          "visuals": {
+            "avatarImage": {
+              "sources": [
+                {
+                  "url": "https://i.scdn.co/image/ab67616d0000b273e19565a5f9c691a5368cc4ef",
+                  "width": 640,
+                  "height": 640
+                },
+                {
+                  "url": "https://i.scdn.co/image/ab67616d00004851e19565a5f9c691a5368cc4ef",
+                  "width": 64,
+                  "height": 64
+                },
+                {
+                  "url": "https://i.scdn.co/image/ab67616d00001e02e19565a5f9c691a5368cc4ef",
+                  "width": 300,
+                  "height": 300
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "pagingInfo": {
+      "nextOffset": 5,
+      "limit": 5
+    }
+  }
+}
