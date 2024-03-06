@@ -22,7 +22,7 @@ export const searchArtistas = async ({ busqueda }) => {
       nombre: artista.data.profile.name,
       imagen: artista.data.visuals.avatarImage?.sources[0]?.url,
     }));
-    console.log(artistasMap);
+    // console.log(artistasMap);
     return artistasMap?.filter((artista) => {
       if (artista.imagen) return artista;
     });
