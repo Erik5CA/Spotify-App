@@ -49,19 +49,18 @@ export function Albums({ albums, infoArtista }) {
   return (
     <div className="contenedor">
       <div className="contenedor-info-artista">
-        <img src={infoArtista[0].imagen} alt="" />
+        <img src={infoArtista.imagen} alt="" />
         <div className="info-artista">
-          <h2>{infoArtista[0].name}</h2>
+          <h2>{infoArtista.name}</h2>
           <p>
             {" "}
-            <span>Folowers: </span> {infoArtista[0].followers}
+            <span>Followers: </span> {infoArtista.followers}
           </p>
-          <h4>Generos</h4>
-          {infoArtista[0]?.genres?.map((genre) => (
-            <p key={genre}>
-              <span>{genre}</span>
-            </p>
-          ))}
+          <p>
+            {" "}
+            <span> Generos: </span>{" "}
+            {infoArtista?.genres?.map((genre) => genre + " / ")}
+          </p>
         </div>
       </div>
       {hasAlbums ? <ListOfAlbums albums={albums} /> : <NotFoundAlbums />}
