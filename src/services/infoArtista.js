@@ -19,12 +19,12 @@ export const searchArtista = async ({ artistaId }) => {
       id: artista.id,
       name: artista.name,
       imagen: artista?.images[0]?.url,
-      followers: artista.followers.total,
+      followers: parseInt(artista.followers.total).toLocaleString("es-MX"),
       genres: artista.genres,
     }));
     console.log(infoArtista);
-    return infoArtista;
+    return infoArtista[0];
   } catch (error) {
-    throw new Error("Error al buscar los albumes.");
+    throw new Error("Error al buscar la informacion del artista.");
   }
 };
