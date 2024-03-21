@@ -17,6 +17,8 @@ export const searchArtistas = async ({ busqueda }) => {
 
     const artistas = result?.artists?.items;
 
+    // console.log(artistas);
+
     const artistasMap = artistas?.map((artista) => ({
       id: artista.data.uri.split(":")[2],
       nombre: artista.data.profile.name,
