@@ -1,0 +1,30 @@
+import API_KEY from "../env";
+
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": API_KEY,
+    "X-RapidAPI-Host": "spotify-web2.p.rapidapi.com",
+  },
+};
+
+export const searchArtista = async ({ artistaId }) => {
+  // console.log('searchAlbums')
+  try {
+    const urlInfoArtista = `https://spotify-web2.p.rapidapi.com/artists/?ids=${artistaId}`;
+    const resonse = await fetch(urlInfoArtista, options);
+    const { artists } = await resonse.json();
+    console.log(artists);
+    const infoArtista = artists?.map((artista) => ({
+      id: artista.id,
+      name: artista.name,
+      imagen: artista?.images[0]?.url,
+      followers: artista.followers.total,
+      genres: artista.genres,
+    }));
+    console.log(infoArtista);
+    return infoArtista;
+  } catch (error) {
+    throw new Error("Error al buscar los albumes.");
+  }
+};
