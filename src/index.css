@@ -4,7 +4,6 @@
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
 }
 
 * {
@@ -15,5 +14,7 @@
 
 body {
   position: relative;
-  background-color: black;
+  background-color: rgb(24, 23, 23);
+  width: 100vw;
+  min-height: 100vh;
 }
