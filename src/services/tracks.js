@@ -20,7 +20,7 @@ export const searchTracks = async ({ albumId }) => {
       numberTrack: track.track.trackNumber,
       nameTrack: track.track.name,
     }));
-    console.log(newTracks);
+    // console.log(newTracks);
     return newTracks;
   } catch (error) {
     throw new Error("Error al buscar los albumes.");
