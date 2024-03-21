@@ -1,0 +1,12 @@
+.contenedor-logo {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  & svg {
+    fill: #1db954;
+  }
+  & span {
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+}

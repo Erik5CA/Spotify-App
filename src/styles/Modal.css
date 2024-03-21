@@ -14,8 +14,8 @@
 }
 
 .modal {
-  background-color: rgba(16, 20, 17, 0.9);
-  padding: 20px 0;
+  background-color: rgba(25, 27, 25, 0.9);
+  padding: 20px 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   /* Sombra ligera */
@@ -25,6 +25,7 @@
   /* Máxima altura del modal */
   overflow-y: auto;
   overflow-x: hidden;
+  /* filter: blur(1px); */
   /* Permitir scroll si el contenido es demasiado largo */
 }
 
@@ -37,15 +38,32 @@
   cursor: pointer;
   color: #c2c1c1;
   font-size: 15px;
+  /* background-color: aqua; */
+  & button {
+    & svg {
+      fill: white;
+    }
+  }
 }
 
 .modal-close:hover {
-  color: rgba(255, 0, 0, 0.575);
+  color: rgba(0, 255, 21, 0.575);
+}
+
+.album-name {
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .track {
   display: flex;
-  align-items: center;
+  /* flex-direction: column; */
+  gap: 20px;
+  text-align: start;
+  /* align-items: center; */
+  justify-content: space-between;
   padding: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -53,27 +71,65 @@
   background-color: black;
   border-radius: 10px;
   box-shadow: inset 0px 0px 11px 3px rgba(209, 206, 206, 0.432);
+  font-size: 12px;
+
+  & .track-info {
+    font-size: 12px;
+    text-align: center;
+    & .track-explicit {
+      background-color: darkgray;
+      color: black;
+      font-weight: 600;
+      /* padding: 1px; */
+      border-radius: 5px;
+    }
+  }
+
+  & p {
+    opacity: 0.7;
+  }
 }
 
 .modal-imagen {
   width: 150px;
   height: 150px;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .modal-name-track {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   font-size: 12px;
   text-align: start;
 }
 
 @media (width > 750px) {
+  .track {
+    font-size: 15px;
+    padding: 10px 30px;
+    & .track-info {
+      font-size: 15px;
+      & .track-explicit {
+        font-size: 15px;
+      }
+    }
+  }
+
   .modal-name-track {
     font-size: 15px;
   }
 }
 
 @media (width > 1000px) {
+  .track {
+    font-size: 18px;
+    & .track-info {
+      font-size: 18px;
+      & .track-explicit {
+        font-size: 18px;
+      }
+    }
+  }
   .modal-name-track {
     font-size: 18px;
   }
