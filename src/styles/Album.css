@@ -1,55 +1,55 @@
 .info-album {
-    width: 250px;
-    margin: 10px;
-    padding: 13px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: rgba(41, 40, 40, 0.534);
-    border-radius: 10px;
-    box-shadow: inset 0px 0px 20px 2px rgba(209, 206, 206, 0.432);
+  width: 250px;
+  /* margin: 10px; */
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  /* box-sizing: border-box; */
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(41, 40, 40, 0.534);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 20px 2px rgba(209, 206, 206, 0.432);
 }
 
 .info-album .imagen-album {
-    width: 150px;
-    height: 150px;
-    border-radius: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
 }
 
 .info-album .nombre-album {
-    margin: 5px;
-    text-align: center;
+  margin: 5px;
+  font-weight: 800;
+  text-align: center;
 }
 
 .btn-traks {
-    width: 80px;
-    height: 35px;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 25px;
-    margin-top: 8px;
-    box-shadow: inset 0px 0px 20px 2px rgba(209, 206, 206, 0.432);
+  width: 80px;
+  height: 35px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin-top: 8px;
+  box-shadow: inset 0px 0px 20px 2px rgba(209, 206, 206, 0.432);
 }
 
 .btn-traks:hover {
-    /* background-color: rgba(44, 68, 44, 0.521); */
-    border: 1px solid rgb(2, 167, 159);
-    color: rgb(7, 188, 201);
-    cursor: pointer;
-    box-shadow: inset 0px 0px 20px 2px rgba(2, 167, 159, 0.432);
-
+  /* background-color: rgba(44, 68, 44, 0.521); */
+  border: 1px solid rgb(2, 167, 159);
+  color: rgb(7, 188, 201);
+  cursor: pointer;
+  box-shadow: inset 0px 0px 20px 2px rgba(2, 167, 159, 0.432);
 }
 
-@media(width <=500px) {
-    .info-album {
-        flex-direction: row;
-        width: 80%;
-    }
+/* @media (width <=500px) {
+  .info-album {
+    flex-direction: row;
+    width: 80%;
+  }
 
-    .btn-traks {
-        display: inline;
-    }
-}
+  .btn-traks {
+    display: inline;
+  }
+} */

@@ -1,43 +1,63 @@
 .contenedor-lista-artistas {
-    margin-top: 20px;
-    padding: 20px 10px;
-    background-color: rgba(15, 15, 15, 0.733);
-    border-radius: 15px;
+  padding: 20px 10px;
+  /* background-color: rgba(15, 15, 15, 0.733); */
+  border-radius: 15px;
 }
 
 .artistas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
 }
 
 .artista {
-    max-width: 155px;
-    max-height: 190px;
-    list-style: none;
-    margin: 10px;
-    border-radius: 5px;
-    border: 1px solid rgb(90, 90, 90);
-    background-color: rgba(41, 40, 40, 0.795);
-    box-shadow: 0px 0px 12px 4px rgba(255, 255, 255, 0.315);
+  display: flex;
+  flex-direction: column;
+
+  width: 110px;
+  height: 130px;
+  list-style: none;
+  /* margin: 10px; */
+  border-radius: 5px;
+  border: 1px solid rgb(90, 90, 90);
+  background-color: rgba(41, 40, 40, 0.795);
+  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.315);
+  transition: scale 0.2s ease-in-out;
 }
 
 .artista img {
-    width: 150px;
-    height: 150px;
-    border-radius: 5px;
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
 }
 
 .artista h3 {
-    text-align: center;
-    padding-bottom: 5px;
+  height: 20%;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 13px;
 }
 
 .artista:hover {
-    outline: 2px solid white;
-    cursor: pointer;
-    opacity: .7;
-    background-color: white;
-    color: black;
+  outline: 2px solid white;
+  cursor: pointer;
+  opacity: 0.7;
+  background-color: white;
+  color: black;
+  scale: 1.1;
+}
+
+@media (width > 750px) {
+  .artistas {
+    justify-content: space-evenly;
+  }
+  .artista {
+    width: 155px;
+    height: 190px;
+    & h3 {
+      font-size: 20px;
+    }
+  }
 }

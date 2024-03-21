@@ -1,34 +1,43 @@
 .form-search {
-    min-width: 400px;
-    height: 50px;
-    background-color: rgba(192, 187, 187, 0.212);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-width: 300px;
+  width: 50%;
+  max-width: 70%;
+  height: 60px;
+  background-color: rgba(192, 187, 187, 0.212);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 0px 10px 2px rgba(209, 206, 206, 0.432);
 }
 
 .input-form-search {
-    width: 70%;
-    height: 50%;
-    font-size: 15px;
-    font-weight: 400;
-    border-radius: 5px;
-    margin-right: 5px;
+  width: 70%;
+  height: 50%;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.input-form-search:focus {
+  outline: 1px solid rgb(27, 238, 80);
 }
 
 .button-form-search {
-    height: 50%;
-    width: 60px;
-    background-color: rgba(0, 0, 0, 0.507);
-    border-radius: 20px;
-    border: 1px solid rgb(255, 255, 255);
-    color: white;
+  height: 50%;
+  width: 70px;
+  background-color: rgba(0, 0, 0, 0.507);
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 15px;
 }
 
 .button-form-search:hover {
-    color: rgb(33, 255, 89);
-    background-color: rgba(27, 236, 80, 0.103);
-    border: 1px solid rgb(27, 238, 80);
-    cursor: pointer;
+  color: rgb(33, 255, 89);
+  background-color: rgba(27, 236, 80, 0.103);
+  border: 1px solid rgb(27, 238, 80);
+  cursor: pointer;
 }
