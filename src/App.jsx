@@ -1,5 +1,5 @@
 import "./App.css";
-import { Albums, Artistas, FormSearch } from "./components";
+import { Albums, Artistas, FormSearch, Logo } from "./components";
 import { useAlbums, useArtistas, useSearch, useInfoArtista } from "./hooks";
 
 import { useRef } from "react";
@@ -35,17 +35,17 @@ function App() {
     }
   };
 
-  // TODO: Hacer que no aparezca el mensaje de no se encontraron artistas y no se encontraron albums al iniciar la aplicación y en su lugar muestre un mensaje de bienvenida
-
   return (
     <>
       <header>
+        <Logo />
         <FormSearch
           handleSumit={handleSumit}
           handleChange={handleChange}
           busqueda={busqueda}
+          error={error}
         />
-        {error && <p>{error}</p>}
+        {/* {error && <p>{error}</p>} */}
       </header>
       <main>
         <section className="contenedor-artistas">
@@ -59,7 +59,7 @@ function App() {
             />
           )}
         </section>
-        <section className="contenedor-albums">
+        <section className="contenedor-albums" id="albums">
           {inicioAlbums.current ? (
             <h2 className="title">
               Selecciona a tu artista y ve su discografía.
