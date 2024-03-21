@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
@@ -10,11 +10,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 body {
   position: relative;
   background-color: rgb(24, 23, 23);
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+  width: 14px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(41, 41, 41); /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 204, 206); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(63, 63, 63); /* creates padding around scroll thumb */
 }
