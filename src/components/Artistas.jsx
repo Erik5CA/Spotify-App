@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import "../styles/Artistas.css";
 import { Artista } from "./Artista";
+import Loading from "./Loading";
+
 function ListOfArtistas({ artistas, seleccionarArtista }) {
   const hasArtistas = artistas?.length > 0;
 
@@ -31,11 +33,9 @@ function NotFoundArtistas() {
 
 export function Artistas({ artistas, seleccionarArtista, loading }) {
 
-
-
   return (
     <>
-    {loading ? <h2>Loading...</h2> 
+    {loading ? <Loading/> 
     :
     <ListOfArtistas
           artistas={artistas}
