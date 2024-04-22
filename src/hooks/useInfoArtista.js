@@ -3,6 +3,7 @@ import { searchArtista } from "../services/infoArtista";
 
 export function useInfoArtista() {
   const [infoArtista, setInfoArtista] = useState(null);
+  const [loading, setLoading] = useState(false);
   // const artistaPrevio = useRef(artistaId)
 
   // useEffect(() => {
@@ -11,8 +12,10 @@ export function useInfoArtista() {
     // if (artistaId === artistaPrevio.current) return
     try {
       // artistaPrevio.current = artistaId
+      setLoading(true);
       const newInfoArtista = await searchArtista({ artistaId });
       setInfoArtista(newInfoArtista);
+      setLoading(false);
     } catch (error) {
       throw new Error("Error");
     }
@@ -21,5 +24,5 @@ export function useInfoArtista() {
   //     getAlbums()
   // }, [artistaId])
 
-  return { infoArtista, getInfoArtista };
+  return { infoArtista, getInfoArtista, loading };
 }

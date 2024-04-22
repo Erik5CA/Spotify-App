@@ -44,26 +44,32 @@ function NotFoundAlbums() {
   );
 }
 
-export function Albums({ albums, infoArtista }) {
+export function Albums({ albums, infoArtista, loading }) {
   const hasAlbums = albums?.length > 0;
   return (
     <div className="contenedor">
-      <div className="contenedor-info-artista">
-        <img src={infoArtista?.imagen} alt="" />
-        <div className="info-artista">
-          <h2>{infoArtista.name}</h2>
-          <p>
-            {" "}
-            <span>Followers: </span> {infoArtista.followers}
-          </p>
-          <p>
-            {" "}
-            <span> Generos: </span>{" "}
-            {infoArtista?.genres?.map((genre) => genre + " / ")}
-          </p>
-        </div>
-      </div>
-      {hasAlbums ? <ListOfAlbums albums={albums} /> : <NotFoundAlbums />}
+      {loading ? (
+        <h2>Loading...</h2>
+      ) : (
+        <>
+          <div className="contenedor-info-artista">
+            <img src={infoArtista?.imagen} alt="" />
+            <div className="info-artista">
+              <h2>{infoArtista.name}</h2>
+              <p>
+                {" "}
+                <span>Followers: </span> {infoArtista.followers}
+              </p>
+              <p>
+                {" "}
+                <span> Generos: </span>{" "}
+                {infoArtista?.genres?.map((genre) => genre + " / ")}
+              </p>
+            </div>
+          </div>
+          {hasAlbums ? <ListOfAlbums albums={albums} /> : <NotFoundAlbums />}
+        </>
+      )}
     </div>
   );
 }

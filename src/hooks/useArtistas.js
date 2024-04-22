@@ -1,24 +1,27 @@
-import { useRef, useState, useMemo } from 'react'
-import { searchArtistas } from '../services/artistas.js'
+import { useRef, useState, useMemo } from "react";
+import { searchArtistas } from "../services/artistas.js";
 
 export function useArtistas({ busqueda }) {
-    const [artistas, setArtistas] = useState([])
-    const busquedaPrevia = useRef(busqueda)
+  const [artistas, setArtistas] = useState([]);
+  const [loadingArt, setLoading] = useState(false);
+  const busquedaPrevia = useRef(busqueda);
 
-    // console.log('useArtista')
+  // console.log('useArtista')
 
-    const getArtistas = useMemo(() => {
-        return async ({ busqueda }) => {
-            if (busqueda === busquedaPrevia.current) return
-            try {
-                busquedaPrevia.current = busqueda
-                const newArtistas = await searchArtistas({ busqueda })
-                setArtistas(newArtistas)
-            } catch (error) {
-                throw new Error('Error')
-            }
-        }
-    }, [])
+  const getArtistas = useMemo(() => {
+    return async ({ busqueda }) => {
+      if (busqueda === busquedaPrevia.current) return;
+      try {
+        setLoading(true);
+        busquedaPrevia.current = busqueda;
+        const newArtistas = await searchArtistas({ busqueda });
+        setArtistas(newArtistas);
+        setLoading(false);
+      } catch (error) {
+        throw new Error("Error");
+      }
+    };
+  }, []);
 
-    return { artistas, getArtistas }
+  return { artistas, getArtistas, loadingArt };
 }

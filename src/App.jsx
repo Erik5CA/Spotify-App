@@ -9,9 +9,9 @@ function App() {
   const inicio = useRef(true);
   const inicioAlbums = useRef(true);
   const { busqueda, setBusqueda, error } = useSearch();
-  const { artistas, getArtistas } = useArtistas({ busqueda });
+  const { artistas, getArtistas,loadingArt } = useArtistas({ busqueda });
   const { albums, getAlbums } = useAlbums();
-  const { infoArtista, getInfoArtista } = useInfoArtista();
+  const { infoArtista, getInfoArtista, loading } = useInfoArtista();
 
   const handleSumit = (event) => {
     event.preventDefault();
@@ -50,11 +50,14 @@ function App() {
       <main>
         <section className="contenedor-artistas">
           {inicio.current ? (
-            <h1 className="title">Busca a tu artista favorito.</h1>
+            <div className="home-artistas">
+              <h1 className="title">Busca a tu artista favorito.</h1>
+            </div>
           ) : (
             <Artistas
               artistas={artistas}
               seleccionarArtista={seleccionarArtista}
+              loading={loadingArt}
               // estadoInicial={inicio}
             />
           )}
@@ -65,7 +68,7 @@ function App() {
               Selecciona a tu artista y ve su discografía.
             </h2>
           ) : (
-            <Albums albums={albums} infoArtista={infoArtista} />
+            <Albums albums={albums} infoArtista={infoArtista} loading={loading} />
           )}
         </section>
       </main>
