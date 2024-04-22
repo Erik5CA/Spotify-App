@@ -48,7 +48,7 @@ function App() {
       <main>
         <section className="contenedor-artistas">
           {inicio.current ? (
-            <div className="home-artistas">
+            <div className="contenedor-mensaje-bienvenida">
               <h1 className="title">Busca a tu artista favorito.</h1>
             </div>
           ) : (
@@ -61,11 +61,17 @@ function App() {
         </section>
         <section className="contenedor-albums" id="albums">
           {inicioAlbums.current ? (
-            <h2 className="title">
-              Selecciona a tu artista y ve su discografía.
-            </h2>
+            <div className="contenedor-mensaje-bienvenida">
+              <h2 className="title">
+                Selecciona a tu artista y ve su discografía.
+              </h2>
+            </div>
           ) : (
-            <Albums albums={albums} infoArtista={infoArtista} loading={loading} />
+            <Albums
+              albums={albums}
+              infoArtista={infoArtista}
+              loading={loading}
+            />
           )}
         </section>
       </main>
