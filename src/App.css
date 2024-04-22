@@ -35,6 +35,23 @@ main {
   box-shadow: inset 0px 0px 20px 2px rgba(209, 206, 206, 0.432);
   border-radius: 15px;
   padding: 17px 0;
+
+  /* opacity: 0.5; */
+}
+
+.home-artistas {
+  background-image: url("../public/music.jpg");
+  background-size: cover;
+  background-color: rgba(240, 248, 255, 0.281);
+  background-position: center;
+  height: 70vh;
+  /* opacity: 0.5; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .contenedor-albums {
@@ -49,6 +66,7 @@ main {
   & .title {
     font-size: 23px;
     font-weight: 800;
+    opacity: 0.9;
   }
 }
 
