@@ -4,10 +4,11 @@ import { Modal } from "./Modal";
 import "../styles/Albums.css";
 import { useState } from "react";
 import { useTracks } from "../hooks/useTracks";
+import Loading from "./Loading";
 
 function ListOfAlbums({ albums }) {
   const [modal, setModal] = useState(null);
-  const { tracks, getTracks } = useTracks();
+  const { tracks, getTracks, loadingTracks } = useTracks();
 
   const openModal = (albumId) => {
     setModal(albumId);
@@ -31,6 +32,7 @@ function ListOfAlbums({ albums }) {
         <Modal
           onClose={closeModal}
           tracks={tracks}
+          loading={loadingTracks}
           album={albums.find((album) => album.idAlbum === modal)}
         />
       )}
@@ -49,7 +51,7 @@ export function Albums({ albums, infoArtista, loading }) {
   return (
     <div className="contenedor">
       {loading ? (
-        <h2>Loading...</h2>
+        <Loading/>
       ) : (
         <>
           <div className="contenedor-info-artista">
