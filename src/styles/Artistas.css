@@ -1,6 +1,5 @@
 .contenedor-lista-artistas {
   padding: 20px 10px;
-  /* background-color: rgba(15, 15, 15, 0.733); */
   border-radius: 15px;
 }
 
@@ -9,13 +8,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* width: 100%;
-  height: 100%; */
   gap: 20px;
-  /* align-items: center; */
   & li {
     list-style: none;
-    /* height: 100%; */
   }
 }
 
@@ -23,18 +18,14 @@
   display: flex;
   flex-direction: column;
   width: 110px;
-  /* height: max-content; */
-  /* height: 130px; */
   text-decoration: none;
   color: white;
-  /* margin: 10px; */
   border-radius: 5px;
   border: 1px solid rgb(90, 90, 90);
   background-color: rgba(41, 40, 40, 0.795);
   box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.315);
   transition: scale 0.2s ease-in-out;
   & .nombre-artista {
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,12 +36,10 @@
 .artista img {
   width: 100%;
   height: 110px;
-  /* height: ; */
   border-radius: 5px;
 }
 
 .artista h3 {
-  /* height: 20%; */
   text-align: center;
   padding-top: 3px;
   font-size: 13px;
@@ -71,10 +60,8 @@
   }
   .artista {
     width: 155px;
-    /* height: 190px; */
 
     & img {
-      /* width: 120px; */
       height: 140px;
     }
 

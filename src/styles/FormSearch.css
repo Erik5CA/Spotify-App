@@ -1,14 +1,11 @@
 .contenedor-form-search {
   display: flex;
   flex-direction: column;
-  /* min-width: 300px; */
   width: 100%;
-  /* max-width: 70%; */
 }
 
 .form-search {
   height: 60px;
-  /* background-color: rgba(192, 187, 187, 0.212); */
   border-radius: 10px;
   display: flex;
   align-items: center;

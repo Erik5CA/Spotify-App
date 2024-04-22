@@ -6,8 +6,6 @@ export function useArtistas({ busqueda }) {
   const [loadingArt, setLoading] = useState(false);
   const busquedaPrevia = useRef(busqueda);
 
-  // console.log('useArtista')
-
   const getArtistas = useMemo(() => {
     return async ({ busqueda }) => {
       if (busqueda === busquedaPrevia.current) return;

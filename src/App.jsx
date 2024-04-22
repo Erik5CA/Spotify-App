@@ -3,7 +3,6 @@ import { Albums, Artistas, FormSearch, Logo } from "./components";
 import { useAlbums, useArtistas, useSearch, useInfoArtista } from "./hooks";
 
 import { useRef } from "react";
-// import { Modal } from './components/Modal'
 
 function App() {
   const inicio = useRef(true);
@@ -45,7 +44,6 @@ function App() {
           busqueda={busqueda}
           error={error}
         />
-        {/* {error && <p>{error}</p>} */}
       </header>
       <main>
         <section className="contenedor-artistas">
@@ -58,7 +56,6 @@ function App() {
               artistas={artistas}
               seleccionarArtista={seleccionarArtista}
               loading={loadingArt}
-              // estadoInicial={inicio}
             />
           )}
         </section>

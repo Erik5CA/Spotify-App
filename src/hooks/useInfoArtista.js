@@ -4,14 +4,12 @@ import { searchArtista } from "../services/infoArtista";
 export function useInfoArtista() {
   const [infoArtista, setInfoArtista] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const artistaPrevio = useRef(artistaId)
+  const artistaPrevio = useRef(null);
 
-  // useEffect(() => {
   const getInfoArtista = async (artistaId) => {
-    // if (artistaId === null) return
-    // if (artistaId === artistaPrevio.current) return
+    if (artistaId === artistaPrevio.current) return;
     try {
-      // artistaPrevio.current = artistaId
+      artistaPrevio.current = artistaId;
       setLoading(true);
       const newInfoArtista = await searchArtista({ artistaId });
       setInfoArtista(newInfoArtista);
@@ -20,9 +18,6 @@ export function useInfoArtista() {
       throw new Error("Error");
     }
   };
-
-  //     getAlbums()
-  // }, [artistaId])
 
   return { infoArtista, getInfoArtista, loading };
 }

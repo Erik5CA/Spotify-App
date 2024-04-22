@@ -2,24 +2,19 @@ import { useRef, useState } from "react";
 import { searchAlbums } from "../services/albums.js";
 
 export function useAlbums() {
-    const [albums, setAlbums] = useState(null)
-    // const artistaPrevio = useRef(artistaId)
+  const [albums, setAlbums] = useState(null);
+  const artistaPrevio = useRef(null);
 
-    // useEffect(() => {
-    const getAlbums = async (artistaId) => {
-        // if (artistaId === null) return
-        // if (artistaId === artistaPrevio.current) return
-        try {
-            // artistaPrevio.current = artistaId
-            const newAlbums = await searchAlbums({ artistaId })
-            setAlbums(newAlbums)
-        } catch (error) {
-            throw new Error('Error')
-        }
+  const getAlbums = async (artistaId) => {
+    if (artistaId === artistaPrevio.current) return;
+    try {
+      artistaPrevio.current = artistaId;
+      const newAlbums = await searchAlbums({ artistaId });
+      setAlbums(newAlbums);
+    } catch (error) {
+      throw new Error("Error");
     }
+  };
 
-    //     getAlbums()
-    // }, [artistaId])
-
-    return { albums, getAlbums }
+  return { albums, getAlbums };
 }
