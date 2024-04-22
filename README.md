@@ -1,8 +1,4 @@
-# React + Vite
+# Spotify App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Aplicacion que utiliza la API de Spotify para obtener los datos de los artistas, su discografía y canciones.
+Permite buscar un artista y ver toda su discografía y las canciones que contiene cada albúm.
