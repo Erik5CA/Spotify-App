@@ -1,12 +1,4 @@
-import API_KEY from "../env";
-
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": API_KEY,
-    "X-RapidAPI-Host": "spotify-web2.p.rapidapi.com",
-  },
-};
+import { options } from "./api";
 
 export const searchArtistas = async ({ busqueda }) => {
   if (busqueda === "") return;
