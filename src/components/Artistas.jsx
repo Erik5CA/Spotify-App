@@ -18,11 +18,10 @@ function ListOfArtistas({ artistas, seleccionarArtista }) {
 }
 
 function NotFoundArtistas() {
-  return <p>No se encontraron resultados para esta busqueda.</p>;
+  return <p className="title">No se encontraron resultados para esta busqueda.</p>;
 }
 
 export function Artistas({ artistas, seleccionarArtista }) {
-  // TODO: Hacer que no aparezca el mensaje de no se encontraron artistas al iniciar la aplicación
 
   const hasArtistas = artistas?.length > 0;
 
