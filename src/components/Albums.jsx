@@ -49,7 +49,7 @@ export function Albums({ albums, infoArtista }) {
   return (
     <div className="contenedor">
       <div className="contenedor-info-artista">
-        <img src={infoArtista.imagen} alt="" />
+        <img src={infoArtista?.imagen} alt="" />
         <div className="info-artista">
           <h2>{infoArtista.name}</h2>
           <p>
