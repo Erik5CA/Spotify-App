@@ -1,5 +1,11 @@
 import "../styles/Logo.css";
 
+/**
+ * This function represents the Logo component of the Spotify App.
+ * It returns a div containing an SVG logo and a span with the app name.
+ *
+ * @returns {JSX.Element} - A JSX element representing the Logo component.
+ */
 export function Logo() {
   return (
     <div className="contenedor-logo">

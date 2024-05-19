@@ -2,6 +2,17 @@
 
 import "../styles/FormSearch.css";
 
+/**
+ * This function represents a form component for searching artists.
+ *
+ * @function FormSearch
+ * @param {Object} props - The properties passed to the component.
+ * @param {Function} props.handleSumit - The function to handle form submission.
+ * @param {Function} props.handleChange - The function to handle input change.
+ * @param {String} props.busqueda - The current search query.
+ * @param {String} props.error - The error message to display.
+ * @returns {JSX.Element} - The JSX representation of the form component.
+ */
 export function FormSearch({ handleSumit, handleChange, busqueda, error }) {
   return (
     <form className="contenedor-form-search" onSubmit={handleSumit}>

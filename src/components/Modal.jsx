@@ -2,6 +2,17 @@
 import "../styles/Modal.css";
 import Loading from "./Loading";
 
+/**
+ * A modal component that displays album information and tracks.
+ *
+ * @param {Object} props - The component's props.
+ * @param {Function} props.onClose - A function to be called when the modal is closed.
+ * @param {Array} props.tracks - An array of track objects.
+ * @param {Object} props.album - An object representing the album.
+ * @param {Boolean} props.loading - A boolean indicating whether the tracks are loading.
+ *
+ * @returns {JSX.Element} - The modal component.
+ */
 export function Modal({ onClose, tracks, album, loading }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -23,7 +34,12 @@ export function Modal({ onClose, tracks, album, loading }) {
           </svg>
         </button>
         <h3 className="album-name">{album.nameAlbum}</h3>
-        <img className="modal-imagen" src={album.imagenAlbum} loading="lazy" />
+        <img
+          className="modal-imagen"
+          src={album.imagenAlbum}
+          loading="lazy"
+          alt={album.nameAlbum}
+        />
         {loading ? (
           <Loading />
         ) : (
